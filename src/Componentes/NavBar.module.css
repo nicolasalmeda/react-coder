@@ -1,0 +1,24 @@
+.NavContainer {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  color: rgb(14, 13, 13);
+  background-color: rgb(177, 176, 176);
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  height: 3rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  margin-top: 0;
+}
+
+.NavImg {
+  display: flex;
+  justify-content: flex-start;
+  width: 7rem;
+  height: 4rem;
+  overflow: hidden;
+  align-items: center;
+  position: relative;
+}
