@@ -1,11 +1,12 @@
 import styles from "./App.module.css";
-import { NavBar } from "./Componentes/NavBar";
+import LandingPage from "./Pages/LandingPage";
+import ItemListContainer from "./Componentes/ItemListContainer";
 
 function App() {
   return (
     <div className={styles.container}>
-      <NavBar />
-      <h1 className={styles.title}> 3jota-Nicolas Lagoria </h1>
+      <LandingPage />
+      <ItemListContainer greeting="HOLA MUNDO" />
     </div>
   );
 }

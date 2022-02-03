@@ -1,6 +1,6 @@
-import { Search } from "./SearchBar";
 import styles from "./NavBar.module.css";
 import logoInicio from "../images/logoFinal.png";
+import CarWidget from "./CarWidget";
 
 export function NavBar() {
   return (
@@ -14,7 +14,9 @@ export function NavBar() {
       <p>Hogar</p>
       <p>Jugueteria</p>
       <p>Librería</p>
-      <Search />
+      <button className={styles.searchButton}>
+        <CarWidget />
+      </button>
     </div>
   );
 }

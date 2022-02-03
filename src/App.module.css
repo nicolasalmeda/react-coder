@@ -2,7 +2,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top: 20px;
   text-align: center;
 }
 
@@ -12,4 +11,5 @@
   color: #ffffff;
   justify-content: center;
   margin-top: 20px;
+  font-family: "Oswald", sans-serif;
 }

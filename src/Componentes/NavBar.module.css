@@ -11,14 +11,23 @@
   padding-left: 3rem;
   padding-right: 3rem;
   margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .NavImg {
   display: flex;
   justify-content: flex-start;
-  width: 7rem;
+  width: 10rem;
   height: 4rem;
   overflow: hidden;
   align-items: center;
   position: relative;
+  cursor: pointer;
+}
+
+.searchButton {
+  cursor: pointer;
+  border: none;
+  background: none;
+  height: 100%;
 }
