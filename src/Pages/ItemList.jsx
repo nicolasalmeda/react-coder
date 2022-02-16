@@ -5,7 +5,7 @@ import Spinner from "../Componentes/Spinner";
 import styles from "./itemList.module.css";
 
 export default function ItemList() {
-  const [prodcuts, setProducts] = useState([]);
+  const [products, setProducts] = useState([]);
   const [isLoading, setisLoading] = useState(false);
 
   useEffect(() => {
@@ -24,7 +24,7 @@ export default function ItemList() {
   return (
     <div>
       <ul className={styles.itemGrid}>
-        {prodcuts.map((product) => {
+        {products.map((product) => {
           return <Item key={product.id} product={product} />;
         })}
       </ul>

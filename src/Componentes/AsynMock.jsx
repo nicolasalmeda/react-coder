@@ -1,9 +1,9 @@
 const products = [
   {
     id: 1,
-    name: "iphone 12",
+    name: "Iphone 12",
     price: "usd 1000",
-    category: "celular",
+    category: ["celular", "Smartphones", "Iphone"],
     img: "https://www.apple.com/newsroom/images/product/iphone/standard/Apple_announce-iphone12pro_10132020.jpg.og.jpg?202108061040",
     stock: 25,
     description: "Descripcion de Iphone 12",
@@ -39,7 +39,7 @@ const products = [
     id: 5,
     name: "Mas duro que fantino",
     price: "usd 1000",
-    category: "celular",
+    category: ["celular", "smartphones", "Iphone"],
     img: "https://static.turbosquid.com/Preview/001229/390/55/nokia-1100-black-3D-model_600.jpg",
     stock: 25,
     description: "Descripcion de Iphone 12",
@@ -50,6 +50,14 @@ export const getProducts = () => {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve(products);
+    }, 3000);
+  });
+};
+
+export const getProduct = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(products[0]);
     }, 3000);
   });
 };
