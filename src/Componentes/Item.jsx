@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Item.module.css";
 
 export default function Item({ product }) {
@@ -11,6 +12,11 @@ export default function Item({ product }) {
         className={styles.itemImage}
       />
       {product.name}
+      <footer>
+        <Link to={`/detail/${product.id}`} className={styles.footer}>
+          Ver Detalle
+        </Link>
+      </footer>
     </li>
   );
 }

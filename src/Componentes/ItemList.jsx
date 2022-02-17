@@ -1,21 +1,23 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../Componentes/AsynMock";
-import Item from "../Componentes/Item";
-import Spinner from "../Componentes/Spinner";
+import { getProducts } from "./AsynMock";
+import Item from "./Item";
+import Spinner from "./Spinner";
 import styles from "./itemList.module.css";
+import { useParams } from "react-router-dom";
 
 export default function ItemList() {
   const [products, setProducts] = useState([]);
   const [isLoading, setisLoading] = useState(false);
+  const { categoryId } = useParams();
+  console.log(categoryId);
 
   useEffect(() => {
     setisLoading(true);
-    getProducts().then((products) => {
-      console.log(products);
+    getProducts(categoryId).then((products) => {
       setProducts(products);
       setisLoading(false);
     });
-  }, []);
+  }, [categoryId]);
 
   if (isLoading) {
     return <Spinner />;

@@ -4,7 +4,7 @@
   text-align: center;
   align-items: center;
   color: rgb(14, 13, 13);
-  background-color: rgb(177, 176, 176);
+  background-color: #65c18c;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   height: 3rem;
@@ -30,4 +30,16 @@
   border: none;
   background: none;
   height: 100%;
+}
+
+.NavLink {
+  text-decoration: none;
+  color: black;
+  background-color: #c1f4c5;
+  border-radius: 1rem;
+  padding: 10px;
+}
+
+.active {
+  background-color: #65c18c;
 }

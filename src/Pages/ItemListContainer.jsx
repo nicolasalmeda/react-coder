@@ -1,10 +1,10 @@
-import ItemCount from "./ItemCount";
+import ItemList from "../Componentes/ItemList";
 
 export default function ItemListContainer({ greeting }) {
   return (
     <div>
       <h1>{greeting}</h1>
-      <ItemCount initial="1" stock="50" />
+      <ItemList />
     </div>
   );
 }

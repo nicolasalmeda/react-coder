@@ -1,3 +1,4 @@
+import ItemCount from "./ItemCount";
 import styles from "./ItemDetail.module.css";
 
 export default function ItemDetail({ products }) {
@@ -22,6 +23,7 @@ export default function ItemDetail({ products }) {
           {products.price}
         </p>
       </div>
+      <ItemCount initial="1" stock="50" />
     </div>
   );
 }
