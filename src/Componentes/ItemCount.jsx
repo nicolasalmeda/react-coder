@@ -17,16 +17,16 @@ export default function ItemCount({ stock, initial, onAdd }) {
   return (
     <div className={styles.itemCountContainer}>
       <div className={styles.childrenContainer}>
-        <button onClick={increment} className={styles.button}>
-          +
-        </button>
-        <div>{count}</div>
         <button onClick={decrement} className={styles.button}>
           -
         </button>
-        <div>
-          <button onClick={onAdd}>Agregar al carrito</button>
-        </div>
+        <div>{count}</div>
+        <button onClick={increment} className={styles.button}>
+          +
+        </button>
+      </div>
+      <div>
+        <button onClick={onAdd}>Agregar al carrito</button>
       </div>
     </div>
   );

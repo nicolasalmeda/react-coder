@@ -1,20 +1,16 @@
 .itemCountContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 200px;
-  background-color: rgb(155, 154, 152);
-  margin-top: 20px;
-}
-.childrenContainer {
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: rgb(155, 154, 152);
+  padding-bottom: 0.5rem;
 }
 
-h3 {
-  height: 30px;
+.childrenContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {

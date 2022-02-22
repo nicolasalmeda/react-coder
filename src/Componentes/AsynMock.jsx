@@ -146,12 +146,12 @@ export const getProducts = (category) => {
     if (category === undefined) {
       setTimeout(() => {
         resolve(products);
-      }, 3000);
+      }, 1000);
     } else {
       const cat = products.filter((p) => p.category === category);
       setTimeout(() => {
         resolve(cat);
-      }, 3000);
+      }, 1000);
     }
   });
 };
@@ -161,6 +161,6 @@ export const getProduct = (id) => {
     const prod = products.find((p) => p.id === parseInt(id));
     setTimeout(() => {
       resolve(prod);
-    }, 3000);
+    }, 1000);
   });
 };

@@ -3,6 +3,7 @@ import { getProduct } from "../Componentes/AsynMock";
 import Spinner from "../Componentes/Spinner";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import ItemCount from "./ItemCount";
 
 export default function ItemDetailContainer() {
   const [products, setProducts] = useState([]);
@@ -26,6 +27,7 @@ export default function ItemDetailContainer() {
     <div>
       <h1>Detalles</h1>
       <ItemDetail key={products.id} products={products} />
+      <ItemCount initial="1" stock="50" />
     </div>
   );
 }

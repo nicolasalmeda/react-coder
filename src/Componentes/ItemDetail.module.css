@@ -1,18 +1,26 @@
 .detailsContainer {
   display: flex;
+  flex-direction: column;
   color: white;
-  gap: 20px;
   justify-content: center;
   text-align: center;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+.border {
+  border: 1px solid;
+  border-radius: 1rem;
+  margin: 10px;
 }
 
 .col {
   max-width: 400px;
-  margin: 5px;
+  margin: 30px;
 }
 
 .productImage {
+  align-items: center;
   border-radius: 15px;
 }
 

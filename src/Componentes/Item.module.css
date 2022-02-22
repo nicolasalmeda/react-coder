@@ -1,19 +1,26 @@
 .itemCard {
+  align-items: center;
   list-style: none;
   font-size: 1.5rem;
-  color: black;
+  color: rgb(78, 77, 77);
   text-align: center;
+  border: 2px solid;
+  border-radius: 1rem;
+  margin: 5px;
+  text-decoration: none;
+  background-color: #f0b4b6;
 
-  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1),
+  text-shadow: -1px -1px 1px rgba(248, 244, 244, 0.555),
     1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 .itemImage {
   border-radius: 10px;
   background-color: azure;
+  margin: 10px;
 }
 
-.footer:hover {
+.p:hover {
   opacity: 0.8;
 }
 
@@ -24,15 +31,10 @@
   }
 }
 
-.footer {
-  color: black;
+.p {
   text-decoration: none;
-  background-color: #f3c583;
-  border-radius: 1rem;
-  padding: 0.3rem;
-  margin-top: 20px;
 }
 
-footer {
-  margin-top: 20px;
+p {
+  text-decoration: none;
 }
