@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import styles from "./Item.module.css";
 import { useRef } from "react";
 import Flippy, { FrontSide, BackSide } from "react-flippy";
+import logocard from "../images/logofinalfinal.png";
 
 export default function Item({ product }) {
   const ref = useRef();
@@ -27,10 +28,8 @@ export default function Item({ product }) {
           </div>
         </li>
       </FrontSide>
-      <BackSide
-        className={styles.BackSide}
-        styles={{ backgroundColor: "#41669d" }}
-      >
+      <BackSide className={styles.BackSide}>
+        <img src={logocard} alt="logocard" className={styles.imglogo} />
         <Link to={`/detail/${product.id}`} className={styles.p}>
           <button className={styles.button}>Detalles</button>
         </Link>

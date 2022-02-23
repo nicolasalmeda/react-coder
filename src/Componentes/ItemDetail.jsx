@@ -2,8 +2,26 @@ import ItemCount from "./ItemCount";
 /*import styles from "./ItemDetail.module.css";*/
 import styles from "./ItemDetail2.module.css";
 import LogoCart from "../images/logofinalfinal.png";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+
+function Addbutton() {
+  return (
+    <div>
+      <Link to={"/cart"}>
+        <button>Ir al Carrito</button>
+      </Link>
+    </div>
+  );
+}
 
 export default function ItemDetail({ products }) {
+  const [totalItem, settotalItems] = useState(0);
+
+  const onAdd = (newitems) => {
+    settotalItems(newitems);
+  };
+
   return (
     <div>
       <div className={styles.card}>
@@ -30,11 +48,11 @@ export default function ItemDetail({ products }) {
               <p>{products.stock}</p>
               <div className={styles.durability}></div>
             </div>
-            <ItemCount
-              initial="1"
-              stock={products.stock}
-              className={styles.ItemCount}
-            />
+            {totalItem === 0 ? (
+              <ItemCount initial="1" stock={products.stock} onAdd={onAdd} />
+            ) : (
+              <Addbutton />
+            )}
           </div>
         </div>
       </div>

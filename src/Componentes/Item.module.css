@@ -40,9 +40,10 @@
 
 .BackSide {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f06e72;
+  background-color: #f65a5f;
   border: 2px solid;
   border-radius: 1rem;
   color: rgb(78, 77, 77);
@@ -70,4 +71,10 @@
   background-color: rgb(240, 238, 236);
   border: 1px solid;
   border-radius: 1rem;
+}
+
+.imglogo {
+  width: 200px;
+  height: 200px;
+  opacity: 0.8;
 }

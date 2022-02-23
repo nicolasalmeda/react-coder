@@ -2,7 +2,10 @@ import styles from "./ItemCount.module.css";
 import { useState } from "react";
 
 export default function ItemCount({ stock, initial, onAdd }) {
-  const [count, setCount] = useState(1);
+  const [count, setCount] = useState(0);
+  const onAddToCart = () => {
+    onAdd(count);
+  };
 
   const increment = () => {
     if (count < stock) {
@@ -26,7 +29,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
         </button>
       </div>
       <div>
-        <button onClick={onAdd}>Agregar al carrito</button>
+        <button onClick={onAddToCart}>Agregar al carrito</button>
       </div>
     </div>
   );
