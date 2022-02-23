@@ -1,17 +1,16 @@
 .detailsContainer {
   display: flex;
-  flex-direction: column;
-  color: white;
   justify-content: center;
+  color: white;
   text-align: center;
   align-items: center;
   flex-wrap: wrap;
+  background-color: ;
 }
 
 .border {
   border: 1px solid;
   border-radius: 1rem;
-  margin: 10px;
 }
 
 .col {
@@ -30,4 +29,13 @@
 
 .firstItem {
   margin-top: 0%;
+}
+
+@media (max-width: 560px) {
+  .detailsContainer {
+    grid-template-columns: 100%;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+  }
 }

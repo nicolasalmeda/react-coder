@@ -20,7 +20,7 @@ export default function ItemCount({ stock, initial, onAdd }) {
         <button onClick={decrement} className={styles.button}>
           -
         </button>
-        <div>{count}</div>
+        <div className={styles.count}>{count}</div>
         <button onClick={increment} className={styles.button}>
           +
         </button>

@@ -3,22 +3,25 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(155, 154, 152);
-  padding-bottom: 0.5rem;
+  text-align: center;
 }
 
 .childrenContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .button {
-  background: none;
-  background-color: rgb(216, 213, 209);
+  text-align: center;
+  background-color: rgb(172, 170, 167);
   font-size: 1.5rem;
   border: none;
   border-radius: 1rem;
-  width: 30px;
   margin: 10px;
+}
+
+.count {
+  font-size: 1.5rem;
 }
