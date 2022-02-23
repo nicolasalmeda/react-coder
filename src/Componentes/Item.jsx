@@ -1,19 +1,40 @@
 import { Link } from "react-router-dom";
 import styles from "./Item.module.css";
+import { useRef } from "react";
+import Flippy, { FrontSide, BackSide } from "react-flippy";
 
 export default function Item({ product }) {
+  const ref = useRef();
   return (
-    <Link to={`/detail/${product.id}`} className={styles.p}>
-      <li className={styles.itemCard}>
-        <img
-          width={200}
-          height={335}
-          src={product.img}
-          alt={product.name}
-          className={styles.itemImage}
-        />
-        <p className={styles.p}>{product.name}</p>
-      </li>
-    </Link>
+    <Flippy
+      flipOnHover={true}
+      flipOnClick={false}
+      flipDirection="horizontal"
+      ref={ref}
+    >
+      <FrontSide className={styles.itemCard}>
+        <li>
+          <img
+            width={175}
+            height={330}
+            src={product.img}
+            alt={product.name}
+            className={styles.itemImage}
+          />
+          <div className={styles.backCard}>
+            <p className={styles.p}>{product.name}</p>
+            <p className={styles.p}>{product.price}</p>
+          </div>
+        </li>
+      </FrontSide>
+      <BackSide
+        className={styles.BackSide}
+        styles={{ backgroundColor: "#41669d" }}
+      >
+        <Link to={`/detail/${product.id}`} className={styles.p}>
+          <button className={styles.button}>Detalles</button>
+        </Link>
+      </BackSide>
+    </Flippy>
   );
 }

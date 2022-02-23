@@ -8,7 +8,7 @@
   border-radius: 1rem;
   margin: 5px;
   text-decoration: none;
-  background-color: #f0b4b6;
+  background-color: #f06e72;
 
   text-shadow: -1px -1px 1px rgba(248, 244, 244, 0.555),
     1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -17,7 +17,8 @@
 .itemImage {
   border-radius: 10px;
   background-color: azure;
-  margin: 10px;
+  width: max-content;
+  min-height: auto;
 }
 
 .p:hover {
@@ -28,13 +29,45 @@
   .itemImage {
     width: 90%;
     height: auto;
+    margin: 5px;
   }
 }
 
 .p {
   text-decoration: none;
+  margin: 5px;
 }
 
-p {
-  text-decoration: none;
+.BackSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f06e72;
+  border: 2px solid;
+  border-radius: 1rem;
+  color: rgb(78, 77, 77);
+  font-size: 1.5rem;
+}
+
+.button {
+  background-color: #65c18c;
+  font-size: 1.5rem;
+  border-radius: 0.75rem;
+  border: none;
+  padding: 0.5rem;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.back {
+  background-color: #ec1017;
+}
+
+.backCard {
+  background-color: rgb(240, 238, 236);
+  border: 1px solid;
+  border-radius: 1rem;
 }

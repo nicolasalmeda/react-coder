@@ -2,10 +2,12 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, 230px);
   justify-content: center;
+  gap: 20px;
 }
 
 @media (max-width: 560px) {
   .itemGrid {
     grid-template-columns: 100%;
+    margin: 10px;
   }
 }
