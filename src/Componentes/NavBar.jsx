@@ -28,7 +28,9 @@ export function NavBar() {
         Librería
       </NavLink>
       <button className={styles.searchButton}>
-        <CarWidget />
+        <NavLink to={"/cart"}>
+          <CarWidget />
+        </NavLink>
       </button>
     </div>
   );

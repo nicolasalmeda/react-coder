@@ -2,7 +2,7 @@ const products = [
   {
     id: 1,
     name: "Copa Vino ",
-    price: "usd 10",
+    price: 6,
     category: "home",
     img: "https://http2.mlstatic.com/D_NQ_NP_993390-MLA43558845578_092020-O.webp",
     stock: 25,
@@ -11,7 +11,7 @@ const products = [
   {
     id: 2,
     name: "Termo Lumilagro",
-    price: "usd 800",
+    price: 5,
     category: "home",
     img: "https://http2.mlstatic.com/D_NQ_NP_946759-MLA42441068380_072020-O.webp",
     stock: 16,
@@ -21,7 +21,7 @@ const products = [
   {
     id: 3,
     name: "Cubiertos Tramontina 24 ",
-    price: "usd 1200",
+    price: 7,
     category: "home",
     img: "https://http2.mlstatic.com/D_NQ_NP_701282-MLA31351985981_072019-O.webp",
     stock: 10,
@@ -30,7 +30,7 @@ const products = [
   {
     id: 4,
     name: "Cafetera Magefasa",
-    price: "usd 1000",
+    price: 20,
     category: "home",
     img: "https://http2.mlstatic.com/D_NQ_NP_721546-MLA43533011483_092020-O.webp",
     stock: 25,
@@ -40,7 +40,7 @@ const products = [
   {
     id: 5,
     name: "Vaso Con Tapa Y Sorbete",
-    price: "usd 0.5",
+    price: 30,
     category: "home",
     img: "https://http2.mlstatic.com/D_NQ_NP_873468-MLA48328881175_112021-O.webp",
     stock: 25,
@@ -49,7 +49,7 @@ const products = [
   {
     id: 6,
     name: "Juego de mesa Simon",
-    price: "usd 8",
+    price: 6,
     category: "toys",
     img: "https://http2.mlstatic.com/D_NQ_NP_692207-MLA47660946770_092021-O.webp",
     stock: 25,
@@ -58,7 +58,7 @@ const products = [
   {
     id: 7,
     name: "Monky loco Ditoys",
-    price: "usd 10",
+    price: 5,
     category: "toys",
     img: "https://http2.mlstatic.com/D_NQ_NP_912464-MLA44676626099_012021-O.webp",
     stock: 25,
@@ -67,7 +67,7 @@ const products = [
   {
     id: 8,
     name: "Bingo bolillero",
-    price: "usd 5",
+    price: 9,
     category: "toys",
     img: "https://http2.mlstatic.com/D_NQ_NP_984834-MLA46557350041_062021-O.webp",
     stock: 25,
@@ -77,7 +77,7 @@ const products = [
   {
     id: 9,
     name: "UNO",
-    price: "usd 3",
+    price: 10,
     category: "toys",
     img: "https://http2.mlstatic.com/D_NQ_NP_942888-MLA46738841701_072021-O.webp",
     stock: 25,
@@ -86,7 +86,7 @@ const products = [
   {
     id: 10,
     name: "Bloques para armar",
-    price: "usd 20",
+    price: 11,
     category: "library",
     img: "https://http2.mlstatic.com/D_NQ_NP_683488-MLA48734494296_012022-O.webp",
     stock: 25,
@@ -96,7 +96,7 @@ const products = [
   {
     id: 11,
     name: "Boligrafo parker",
-    price: "usd 100",
+    price: 3,
     category: "library",
     img: "https://http2.mlstatic.com/D_NQ_NP_760449-MLA48087000026_112021-O.webp",
     stock: 25,
@@ -106,7 +106,7 @@ const products = [
   {
     id: 12,
     name: "Libreta",
-    price: "usd 1.5",
+    price: 4,
     category: "library",
     img: "https://http2.mlstatic.com/D_NQ_NP_821132-MLA45033101680_022021-O.webp",
     stock: 25,
@@ -115,7 +115,7 @@ const products = [
   {
     id: 13,
     name: "Goma Maped",
-    price: "usd 0.5",
+    price: 6,
     category: "library",
     img: "https://http2.mlstatic.com/D_NQ_NP_685916-MLA44003501676_112020-O.webp",
     stock: 25,
@@ -124,7 +124,7 @@ const products = [
   {
     id: 14,
     name: "Regla Metal",
-    price: "usd 2.5",
+    price: 9,
     category: "library",
     img: "https://http2.mlstatic.com/D_NQ_NP_662368-MLA48073895068_102021-O.webp",
     stock: 25,
@@ -133,7 +133,7 @@ const products = [
   {
     id: 15,
     name: "Regla Pizzini",
-    price: "usd 0.5",
+    price: 15,
     category: "library",
     img: "https://http2.mlstatic.com/D_NQ_NP_681782-MLA46857318660_072021-O.webp",
     stock: 25,

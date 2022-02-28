@@ -2,26 +2,28 @@ import ItemCount from "./ItemCount";
 /*import styles from "./ItemDetail.module.css";*/
 import styles from "./ItemDetail2.module.css";
 import LogoCart from "../images/logofinalfinal.png";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
 
-function Addbutton() {
-  return (
-    <div>
-      <Link to={"/cart"}>
-        <button>Ir al Carrito</button>
-      </Link>
-    </div>
-  );
-}
+import Addbutton from "./Addbutton";
+import CartContext from "../context/CartContext";
 
 export default function ItemDetail({ products }) {
   const [totalItem, settotalItems] = useState(0);
+  const { addItem, cart } = useContext(CartContext);
 
   const onAdd = (newitems) => {
     settotalItems(newitems);
+    console.log(newitems);
+
+    const productToAdd = products;
+    console.log("Product add item detail: ", productToAdd);
+
+    addItem(productToAdd, newitems);
+
+    console.log(addItem);
   };
 
+  console.log(" cart de item detail : ", cart);
   return (
     <div>
       <div className={styles.card}>
