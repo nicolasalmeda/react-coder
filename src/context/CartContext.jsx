@@ -15,7 +15,7 @@ export const CartContextProvider = ({ children }) => {
     console.log("newObj en Context  :", newObj);
 
     if (isInCart(productToAdd.id)) {
-      alert("El producto ya esta en el carrito");
+      return alert("El producto ya esta en el carrito");
     } else {
       setCart([...cart, newObj]);
       console.log("productos en Context dentro de addItem :", newObj);
@@ -34,6 +34,15 @@ export const CartContextProvider = ({ children }) => {
     setCart([]);
   };
 
+  const suma = () => {
+    let sumador = 0;
+    cart.map((item) => {
+      return (sumador = sumador + item.totalItem);
+    });
+
+    return sumador;
+  };
+
   return (
     <Context.Provider
       value={{
@@ -41,6 +50,7 @@ export const CartContextProvider = ({ children }) => {
         addItem,
         removeItem,
         clear,
+        suma,
       }}
     >
       {children}
