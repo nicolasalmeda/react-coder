@@ -8,7 +8,7 @@
   border-radius: 1rem;
   margin: 5px;
   text-decoration: none;
-  background-color: #f06e72;
+  background-color: #f06e72 !important;
 
   text-shadow: -1px -1px 1px rgba(248, 244, 244, 0.555),
     1px 1px 1px rgba(0, 0, 0, 0.5);
@@ -43,7 +43,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f65a5f;
+  background-color: #f65a5f !important;
   border: 2px solid;
   border-radius: 1rem;
   color: rgb(78, 77, 77);

@@ -6,8 +6,6 @@ import { Link } from "react-router-dom";
 export default function Cart() {
   const { cart, clear, removeItem } = useContext(CartContext);
 
-  console.log("cart en Cart:", cart);
-
   let total = 0;
   return (
     <div>

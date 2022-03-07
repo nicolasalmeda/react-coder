@@ -22,7 +22,7 @@ export function NavBar() {
 
       <NavLink
         to={"/category/home"}
-        activeClassName={styles.active}
+        activeclassname={styles.active}
         className={styles.NavLink}
       >
         Hogar

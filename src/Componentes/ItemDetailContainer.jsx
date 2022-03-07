@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { getProduct } from "../Componentes/AsynMock";
 import Spinner from "../Componentes/Spinner";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
+import { getDoc, doc } from "firebase/firestore";
+import { firestoreDb } from "../firebase/firebase";
 
 export default function ItemDetailContainer() {
   const [products, setProducts] = useState([]);
@@ -10,12 +11,22 @@ export default function ItemDetailContainer() {
   const [isLoading, setisLoading] = useState(false);
 
   useEffect(() => {
+    const docRef = doc(firestoreDb, "products", productId);
+
     setisLoading(true);
-    getProduct(productId).then((products) => {
-      setProducts(products);
+
+    getDoc(docRef).then((querySnapshot) => {
+      const product = { id: querySnapshot.id, ...querySnapshot.data() };
+      setProducts(product);
       setisLoading(false);
-      console.log(products);
     });
+
+    // setisLoading(true);
+    // getProduct(productId).then((products) => {
+    //   setProducts(products);
+    //   setisLoading(false);
+    //   console.log(products);
+    // });
   }, [productId]);
 
   if (isLoading) {

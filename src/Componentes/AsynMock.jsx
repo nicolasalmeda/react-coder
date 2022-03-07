@@ -1,7 +1,7 @@
 const products = [
   {
     id: 1,
-    name: "Copa Vino ",
+    name: "Copa de Vino ",
     price: 6,
     category: "home",
     img: "https://http2.mlstatic.com/D_NQ_NP_993390-MLA43558845578_092020-O.webp",
