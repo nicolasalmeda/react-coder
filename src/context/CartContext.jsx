@@ -1,9 +1,13 @@
 import { createContext, useState } from "react";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
+import "./CartContext.css";
 
 const Context = createContext();
 
 export const CartContextProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
+  const MySwal = withReactContent(Swal);
 
   const addItem = (productToAdd, totalItem) => {
     const newObj = {
@@ -12,7 +16,10 @@ export const CartContextProvider = ({ children }) => {
     };
 
     if (isInCart(productToAdd.id)) {
-      return alert("El producto ya esta en el carrito");
+      return MySwal.fire({
+        icon: "warning",
+        title: <p>El producto ya esta en el carrito</p>,
+      });
     } else {
       setCart([...cart, newObj]);
     }
@@ -30,13 +37,12 @@ export const CartContextProvider = ({ children }) => {
     setCart([]);
   };
 
-  const suma = () => {
-    let sumador = 0;
-    cart.map((item) => {
-      return (sumador = sumador + item.totalItem);
+  const getTotal = () => {
+    let total = 0;
+    cart.forEach((prod) => {
+      total = total + prod.price * prod.totalItem;
     });
-
-    return sumador;
+    return total;
   };
 
   return (
@@ -46,7 +52,7 @@ export const CartContextProvider = ({ children }) => {
         addItem,
         removeItem,
         clear,
-        suma,
+        getTotal,
       }}
     >
       {children}

@@ -29,11 +29,6 @@ export default function ItemList() {
       setProducts(products);
       setisLoading(false);
     });
-
-    // getProducts(categoryId).then((products) => {
-    //   setProducts(products);
-    //   setisLoading(false);
-    // });
   }, [categoryId]);
 
   if (isLoading) {

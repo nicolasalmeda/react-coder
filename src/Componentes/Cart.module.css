@@ -1,12 +1,18 @@
+.Cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .container {
   display: flex;
   border-bottom: 1px solid;
   border-color: rgb(59, 59, 59);
   align-items: center;
-  margin: 5px;
+  margin: 20px;
   justify-content: space-between;
   border: 1px solid;
   border-radius: 1rem;
+  width: 90%;
 }
 
 .title {
@@ -23,6 +29,7 @@
   margin-bottom: 10px;
   margin-left: 50px;
   margin-top: 10px;
+  margin-right: 50px;
 }
 
 .img {
@@ -37,6 +44,14 @@
   justify-content: flex-end;
   margin-right: 50px;
 }
+.containerTitle {
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 30%;
+  align-items: center;
+  justify-content: space-around;
+}
 
 .buttonRemove {
   font-size: 1rem;
@@ -47,9 +62,134 @@
   font-size: 1.5rem;
   color: black;
 }
-.clearButton {
+.buttonContainer {
+  display: flex;
+  justify-content: space-evenly;
   margin: 10px;
 }
+
 .navigateButton {
+  background-color: #a421f0;
+}
+
+.confirmButton {
   background-color: #65c18c;
+}
+.subtotal {
+  margin-bottom: 10px;
+  font-size: large;
+}
+.totalItem {
+  margin-bottom: 5px;
+  border-bottom: 1px solid;
+}
+
+.ContactContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  width: 100%;
+  height: 100%;
+  font-size: 1.5rem;
+}
+
+.conta {
+  width: 100%;
+  height: 100%;
+}
+
+.ContactForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 5px;
+  width: 100%;
+  height: 100%;
+}
+.ButtonSubmit {
+  margin: 20px;
+  border-radius: 3px;
+  text-align: center;
+}
+.LabelContact {
+  font-size: 1.5rem;
+  margin: 10px;
+}
+.InputContact {
+  width: 25%;
+  height: 75%;
+}
+
+@media (max-width: 560px) {
+  .Cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .container {
+    display: flex;
+    border-bottom: 1px solid;
+    border-color: rgb(59, 59, 59);
+    align-items: center;
+    width: auto;
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 1rem;
+  }
+
+  .title {
+    color: rgb(42, 42, 42);
+    font-size: 1.5rem;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0%;
+  }
+
+  .img {
+    width: 225px;
+    height: 200px;
+    border-radius: 1rem;
+    margin: 10px;
+  }
+
+  .detailsContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-right: 50px;
+  }
+
+  .buttonRemove {
+    font-size: 1rem;
+    padding: 0%;
+  }
+
+  .finalPrice {
+    font-size: 1.5rem;
+    color: black;
+  }
+  .clearButton {
+    margin: 10px;
+  }
+  .navigateButton {
+    background-color: #65c18c;
+  }
+  .subtotal {
+    margin-bottom: 10px;
+    font-size: large;
+  }
+  .totalItem {
+    margin-bottom: 5px;
+    border-bottom: 1px solid;
+  }
 }

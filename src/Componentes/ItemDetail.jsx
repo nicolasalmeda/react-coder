@@ -9,21 +9,16 @@ import CartContext from "../context/CartContext";
 
 export default function ItemDetail({ products }) {
   const [totalItem, settotalItems] = useState(0);
-  const { addItem, cart } = useContext(CartContext);
+  const { addItem } = useContext(CartContext);
 
   const onAdd = (newitems) => {
     settotalItems(newitems);
-    console.log(newitems);
 
     const productToAdd = products;
-    console.log("Product add item detail: ", productToAdd);
 
     addItem(productToAdd, newitems);
-
-    console.log(addItem);
   };
 
-  console.log(" cart de item detail : ", cart);
   return (
     <div>
       <div className={styles.card}>
@@ -53,36 +48,11 @@ export default function ItemDetail({ products }) {
             {totalItem === 0 ? (
               <ItemCount initial="1" stock={products.stock} onAdd={onAdd} />
             ) : (
-              <Addbutton />
+              <Addbutton className={styles.button} />
             )}
           </div>
         </div>
       </div>
-
-      {/* <div className={`${styles.detailsContainer} ${styles.border} `}>
-        <div>
-          <img
-            src={products.img}
-            alt={products.title}
-            className={`${styles.col} ${styles.productImage}`}
-          />
-        </div>
-        <div className={`${styles.col} ${styles.productDetails}`}>
-          <p className={styles.firstItem}>
-            <strong>Title: </strong>
-            {products.name}
-          </p>
-          <p>
-            <strong>Description: </strong>
-            {products.description}
-          </p>
-          <p>
-            <strong>Precio: </strong>
-            {products.price}
-          </p>
-        </div>
-      </div>
-      <ItemCount initial="1" stock={products.stock} /> */}
     </div>
   );
 }

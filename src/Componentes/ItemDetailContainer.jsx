@@ -20,13 +20,6 @@ export default function ItemDetailContainer() {
       setProducts(product);
       setisLoading(false);
     });
-
-    // setisLoading(true);
-    // getProduct(productId).then((products) => {
-    //   setProducts(products);
-    //   setisLoading(false);
-    //   console.log(products);
-    // });
   }, [productId]);
 
   if (isLoading) {

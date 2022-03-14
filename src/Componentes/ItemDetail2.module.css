@@ -114,6 +114,10 @@ button {
   text-align: center;
 }
 
+.button {
+  background: #cb2140;
+}
+
 .h4 {
   font-weight: bold;
   line-height: normal;
