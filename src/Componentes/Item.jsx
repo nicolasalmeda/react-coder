@@ -14,7 +14,7 @@ export default function Item({ product }) {
       ref={ref}
     >
       <FrontSide className={styles.itemCard}>
-        <li>
+        <li className={styles.itemLi}>
           <img
             width={175}
             height={330}
@@ -22,10 +22,9 @@ export default function Item({ product }) {
             alt={product.name}
             className={styles.itemImage}
           />
-          <div className={styles.backCard}>
-            <p className={styles.p}>{product.name}</p>
-            <p className={styles.p}>{product.price}</p>
-          </div>
+
+          <h2 className={styles.p}>{product.name}</h2>
+          <h3 className={styles.p}> $ {product.price}</h3>
         </li>
       </FrontSide>
       <BackSide className={styles.BackSide}>

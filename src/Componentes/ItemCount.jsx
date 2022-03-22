@@ -2,7 +2,7 @@ import styles from "./ItemCount.module.css";
 import { useState } from "react";
 
 export default function ItemCount({ stock, initial, onAdd }) {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const onAddToCart = () => {
     onAdd(count);
   };

@@ -25,11 +25,15 @@ button:focus {
 .card .left {
   width: 480px;
   height: 553px;
-  background-color: #f64e53;
+  background-color: #059cd5;
   border: 23px;
   display: flex;
   align-items: center;
   border-radius: 23px;
+}
+
+.responsiveContainer {
+  display: none;
 }
 
 .img1 {
@@ -42,7 +46,7 @@ button:focus {
 .right {
   width: 654px;
   height: 479px;
-  background-color: #fa8185;
+  background-color: #b5e7e6;
   position: absolute;
   left: -10%;
   transform: translate(50%);
@@ -62,10 +66,11 @@ button:focus {
 }
 
 .right .productInfo {
+  font-family: sans-serif;
   width: 300px;
   height: 300px;
   margin: 50px 0 0 235px;
-  color: white;
+  color: #424236;
 }
 
 .productInfo h2 {
@@ -105,17 +110,13 @@ button:focus {
 
 button {
   height: 48px;
-  background: #cb2140;
+  background: #059cd5;
   border-radius: 90px;
   font-weight: 300;
   font-size: 17px;
   padding: 0 24px;
   color: white;
   text-align: center;
-}
-
-.button {
-  background: #cb2140;
 }
 
 .h4 {

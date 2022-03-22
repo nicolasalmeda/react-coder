@@ -27,14 +27,13 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  margin-left: 50px;
+
   margin-top: 10px;
-  margin-right: 50px;
 }
 
 .img {
-  width: 225px;
-  height: 200px;
+  width: 60%;
+  height: 60%;
   border-radius: 1rem;
 }
 
@@ -42,20 +41,20 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  margin-right: 50px;
+  margin-right: 10px;
 }
 .containerTitle {
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 50%;
   width: 30%;
-  align-items: center;
-  justify-content: space-around;
+  margin-right: 50px;
 }
 
 .buttonRemove {
   font-size: 1rem;
   padding: 0%;
+  background-color: rgb(179, 18, 18);
 }
 
 .finalPrice {
@@ -69,19 +68,28 @@
 }
 
 .navigateButton {
-  background-color: #a421f0;
+  background-color: #79e6e4;
 }
 
 .confirmButton {
-  background-color: #65c18c;
+  background-color: #1cdf6d;
+}
+.buttonBD {
+  margin-top: 20px;
+}
+
+.infromationD {
+  font-size: 1.5rem;
 }
 .subtotal {
   margin-bottom: 10px;
   font-size: large;
+  color: black;
 }
 .totalItem {
   margin-bottom: 5px;
   border-bottom: 1px solid;
+  color: black;
 }
 
 .ContactContainer {
@@ -94,6 +102,9 @@
   width: 100%;
   height: 100%;
   font-size: 1.5rem;
+}
+.color {
+  color: black;
 }
 
 .conta {
@@ -111,7 +122,7 @@
 }
 .ButtonSubmit {
   margin: 20px;
-  border-radius: 3px;
+  border-radius: 1rem;
   text-align: center;
 }
 .LabelContact {
@@ -121,6 +132,11 @@
 .InputContact {
   width: 25%;
   height: 75%;
+}
+
+.buttonClear {
+  background-color: rgb(179, 18, 18);
+  margin: 10px;
 }
 
 @media (max-width: 560px) {
@@ -178,8 +194,9 @@
     font-size: 1.5rem;
     color: black;
   }
-  .clearButton {
-    margin: 10px;
+
+  .buttonClear {
+    margin: 20px;
   }
   .navigateButton {
     background-color: #65c18c;

@@ -2,15 +2,8 @@ import { useContext, useState } from "react";
 import CartContext from "../context/CartContext";
 import styles from "./Cart.module.css";
 import { Link } from "react-router-dom";
-import {
-  writeBatch,
-  getDoc,
-  doc,
-  addDoc,
-  collection,
-  Timestamp,
-} from "firebase/firestore";
-import { firestoreDb } from "../firebase/firebase";
+import { writeBatch, addDoc, collection, Timestamp } from "firebase/firestore";
+import { firestoreDb, getStock } from "../firebase/firebase";
 import withReactContent from "sweetalert2-react-content";
 import Swal from "sweetalert2";
 
@@ -58,17 +51,11 @@ export default function Cart() {
       };
 
       const batch = writeBatch(firestoreDb);
-      const outOfStock = [];
+      let outOfStock = [];
 
       objOrder.items.forEach((prod) => {
-        getDoc(doc(firestoreDb, "products", prod.id)).then((response) => {
-          if (response.data().stock >= prod.totalItem) {
-            batch.update(doc(firestoreDb, "products", response.id), {
-              stock: response.data().stock - prod.totalItem,
-            });
-          } else {
-            outOfStock.push({ id: response.id, ...response.data() });
-          }
+        getStock(prod).then((response) => {
+          outOfStock = response;
         });
       });
       if (outOfStock.length === 0) {
@@ -79,9 +66,14 @@ export default function Cart() {
               MySwal.fire({
                 icon: "success",
                 title: "Orden generada",
-                text: `
-              La orden se genero existosamente, su numero de orden es: ${id}
-              Para ${contact.name} Dirección ${contact.address}
+                html: `
+                  <p>La orden se genero exitosamente</p>
+                  <ul>
+                  <li>Su numero de orden es: ${id}</li>
+                  <li>Para ${contact.name}</li>
+                  <li>Dirección ${contact.address}</li>
+
+                  </ul>
               `,
                 confirmButtonColor: "#20e973",
               });
@@ -109,7 +101,7 @@ export default function Cart() {
 
   let total = 0;
   return (
-    <div>
+    <div className={styles.color}>
       <ul>
         {cart.map((items) => {
           const subtotal = items.price * items.totalItem;
@@ -136,7 +128,7 @@ export default function Cart() {
                     onClick={() => removeItem(items.id)}
                     className={styles.buttonRemove}
                   >
-                    Remove
+                    Borrar Producto
                   </button>
                 </div>
               </div>
@@ -146,6 +138,11 @@ export default function Cart() {
       </ul>
       <div className={styles.finalPrice}>
         <p>Precio Total:{getTotal()}</p>
+      </div>
+      <div>
+        <button className={styles.buttonClear} onClick={() => clear()}>
+          Borrar Carrito
+        </button>
       </div>
       <div className={styles.ContactContainer}>
         <div>Contacto</div>
@@ -186,11 +183,30 @@ export default function Cart() {
 
           <div>
             <button className={styles.ButtonSubmit} type="submit">
-              Confirmar
+              Confirmar Datos
             </button>
           </div>
         </form>
       </div>
+
+      {contact.phone !== "" &&
+        contact.address !== "" &&
+        contact.comment !== "" &&
+        contact.name !== "" && (
+          <div className={styles.infromationD}>
+            <h4>Nombre: {contact.name}</h4>
+            <h4>Telefono: {contact.phone}</h4>
+            <h4>Direccion: {contact.address}</h4>
+            <button
+              onClick={() =>
+                setContact({ phone: "", address: "", comment: "" })
+              }
+              className={styles.buttonBD}
+            >
+              Borrar datos de contacto
+            </button>
+          </div>
+        )}
       <div className={styles.buttonContainer}>
         <div>
           <button
@@ -201,33 +217,10 @@ export default function Cart() {
           </button>
         </div>
         <div>
-          <button onClick={() => clear()}>Clear</button>
+          <Link to={"/"}>
+            <button className={styles.navigateButton}>Seguir Navegando</button>
+          </Link>
         </div>
-      </div>
-      {contact.phone !== "" &&
-        contact.address !== "" &&
-        contact.comment !== "" &&
-        contact.name !== "" && (
-          <div>
-            <h4>Nombre: {contact.name}</h4>
-            <h4>Telefono: {contact.phone}</h4>
-            <h4>Direccion: {contact.address}</h4>
-            <h4>Comentario: {contact.comment}</h4>
-            <button
-              onClick={() =>
-                setContact({ phone: "", address: "", comment: "" })
-              }
-              className="Button"
-              style={{ backgroundColor: "#db4025" }}
-            >
-              Borrar datos de contacto
-            </button>
-          </div>
-        )}
-      <div>
-        <Link to={"/"}>
-          <button className={styles.navigateButton}>Seguir Navegando</button>
-        </Link>
       </div>
     </div>
   );

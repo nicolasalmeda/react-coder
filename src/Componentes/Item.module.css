@@ -6,12 +6,9 @@
   text-align: center;
   border: 2px solid;
   border-radius: 1rem;
-  margin: 5px;
-  text-decoration: none;
-  background-color: #f06e72 !important;
 
-  text-shadow: -1px -1px 1px rgba(248, 244, 244, 0.555),
-    1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  background-color: #b5e7e6 !important;
 }
 
 .itemImage {
@@ -23,6 +20,21 @@
 
 .p:hover {
   opacity: 0.8;
+}
+
+h2 {
+  color: #333333;
+  font-size: 17px;
+  font-family: sans-serif;
+  width: 100%;
+  height: auto;
+}
+
+h3 {
+  color: #424236;
+  font-size: 20px;
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 560px) {
@@ -43,7 +55,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f65a5f !important;
+  background-color: #b5e7e6 !important;
   border: 2px solid;
   border-radius: 1rem;
   color: rgb(78, 77, 77);
@@ -51,7 +63,7 @@
 }
 
 .button {
-  background-color: #65c18c;
+  background-color: #059cd5;
   font-size: 1.5rem;
   border-radius: 0.75rem;
   border: none;

@@ -20,7 +20,7 @@ export default function ItemDetail({ products }) {
   };
 
   return (
-    <div>
+    <div className={styles.container}>
       <div className={styles.card}>
         <div className={styles.left}>
           <div className={styles.slider}>
@@ -36,7 +36,7 @@ export default function ItemDetail({ products }) {
           />
           <div className={styles.productInfo}>
             <h2> {products.name} </h2>
-            <h3> {products.price}</h3>
+            <h3> $ {products.price}</h3>
             <div className={styles.details}>
               <div className={styles.size}>
                 <p className={styles.h4}>{products.description}</p>

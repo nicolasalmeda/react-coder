@@ -4,7 +4,7 @@
   text-align: center;
   align-items: center;
   color: rgb(14, 13, 13);
-  background-color: #65c18c;
+  background-color: #f5eaca;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
   height: 3rem;
@@ -37,17 +37,13 @@
 .NavLink {
   text-decoration: none;
   color: black;
-  background-color: #c1f4c5;
+  background-color: #b5e7e6;
   border-radius: 1rem;
   padding: 10px;
 }
 
 .NavLink:hover {
   opacity: 0.8;
-}
-
-.active {
-  background-color: #65c18c;
 }
 
 .CarWidget {
